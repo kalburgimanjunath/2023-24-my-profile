@@ -4,17 +4,20 @@ export default function Navbar() {
     { title: "About", link: "About" },
     { title: "Projects", link: "Projects" },
     { title: "Articles", link: "articles" },
-    { title: "Contact Me", link: "contact" }
+    { title: "Contact Me", link: "contact" },
   ];
   return (
-    <div>
+    <div className="flex justify-center fixed top-0 ">
       <nav>
-        <ul>
-          <li className="font-bold">Logo</li>
+        <ul className="flex">
+          <li className="font-bold p-2">Logo</li>
           {navlinks &&
             navlinks.map((item) => {
               return (
-                <li key={item.link}>
+                <li
+                  key={item.link}
+                  className="p-2 text-md hover:bg-gray-400 hover:text-white"
+                >
                   <a href="">{item.title}</a>
                 </li>
               );
