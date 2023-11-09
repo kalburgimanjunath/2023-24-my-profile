@@ -7,7 +7,7 @@ export default function Navbar() {
     { title: "Contact Me", link: "contact" },
   ];
   return (
-    <div className="flex justify-center fixed top-0 ">
+    <div className="flex justify-center fixed top-0 shadow-lg w-full">
       <nav>
         <ul className="flex">
           <li className="font-bold p-2">Logo</li>
