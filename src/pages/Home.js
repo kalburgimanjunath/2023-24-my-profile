@@ -1,12 +1,20 @@
-import { Sidebar } from "../components";
+import { Sidebar, Cards } from "../components";
 const HomePage = ({ profile }) => {
   return (
-    <div>
-      {profile && <Hero title={profile.displayname} subtitle={profile.bio} />}
+    <div className="">
+      <div>
+        {profile && (
+          <Hero
+            title={profile.displayname}
+            isShowmore={true}
+            subtitle={profile.bio}
+          />
+        )}
+      </div>
     </div>
   );
 };
-const Hero = ({ title, subtitle }) => {
+export const Hero = ({ title, subtitle, isShowmore = false }) => {
   return (
     <div className="bg-white border-2 m-2 rounded-lg">
       <div className=" flex p-3 align-center">
@@ -20,17 +28,21 @@ const Hero = ({ title, subtitle }) => {
       </div>
 
       <h3>{subtitle}</h3>
-      <a href="" className="flex button-primary hover:bg-pink-600 text-white">
-        Know more
-      </a>
+      {isShowmore && (
+        <a href="" className="flex button-primary hover:bg-pink-600 text-white">
+          Know more
+        </a>
+      )}
     </div>
   );
 };
 export default function Home({ profile }) {
   return (
-    <div className="container m-24">
+    <div className="container mt-5 ml-2 mr-2 mb-2">
       <Sidebar />
       <HomePage profile={profile} />
+      <Cards title="Projects" items={profile.projects} />
+      <Cards title="Posts" items={profile.projects} />
     </div>
   );
 }
