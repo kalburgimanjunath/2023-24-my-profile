@@ -9,10 +9,16 @@ const HomePage = ({ profile }) => {
 const Hero = ({ title, subtitle }) => {
   return (
     <div className="bg-white border-2 m-2 rounded-lg">
-      <div>
-        <img src="" width={200} height={200} />
+      <div className=" flex p-3 align-center">
+        <img
+          src="https://i.pravatar.cc/300"
+          width={200}
+          height={200}
+          className="rounded-full"
+        />
+        <h1 className="text-2xl align-center">{title}</h1>
       </div>
-      <h1 className="text-2xl">{title}</h1>
+
       <h3>{subtitle}</h3>
       <a href="" className="flex button-primary hover:bg-pink-600 text-white">
         Know more
