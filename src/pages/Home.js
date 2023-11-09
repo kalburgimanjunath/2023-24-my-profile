@@ -9,7 +9,9 @@ const HomePage = ({ profile }) => {
 const Hero = ({ title, subtitle }) => {
   return (
     <div className="bg-white border-2 m-2 rounded-lg">
-      <img src="" width={200} height={200} />
+      <div>
+        <img src="" width={200} height={200} />
+      </div>
       <h1 className="text-2xl">{title}</h1>
       <h3>{subtitle}</h3>
       <a href="" className="flex button-primary hover:bg-pink-600 text-white">
