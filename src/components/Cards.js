@@ -1,5 +1,5 @@
 import React from "react";
-export default function Cards({ title, items }) {
+export default function Cards({ title, items, link }) {
   return (
     <div>
       <h1 className="font-bold text-2xl text-left ml-2">{title}</h1>

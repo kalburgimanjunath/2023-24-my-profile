@@ -12,7 +12,7 @@ export default function Navbar() {
       <nav>
         <ul className="flex">
           <li className="font-bold p-2 cursor-pointer text-pink-600 hover:text-pink-700 hover:scale-y-150">
-            Logo
+            <Link to="/">Logo</Link>
           </li>
           {navlinks &&
             navlinks.map((item) => {

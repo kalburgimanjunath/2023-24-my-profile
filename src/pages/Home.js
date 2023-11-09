@@ -1,4 +1,5 @@
 import { Sidebar, Cards } from "../components";
+import { Link } from "react-router-dom";
 const HomePage = ({ profile }) => {
   return (
     <div className="">
@@ -29,9 +30,12 @@ export const Hero = ({ title, subtitle, isShowmore = false }) => {
 
       <h3>{subtitle}</h3>
       {isShowmore && (
-        <a href="" className="flex button-primary hover:bg-pink-600 text-white">
+        <Link
+          to="/about"
+          className="flex button-primary hover:bg-pink-600 text-white"
+        >
           Know more
-        </a>
+        </Link>
       )}
     </div>
   );
