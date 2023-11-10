@@ -24,8 +24,8 @@ export default function About({ profile }) {
     <div className="m-24 w-full">
       <div className="grid md:grid-cols-2 border-2 ">
         {profile && <Hero title={profile.displayname} subtitle={profile.bio} />}
-        <div className="w-full">
-          <div className="tabs flex justify-left shadow-lg">
+        <div className="">
+          <div className="fixed right-0 tabs justify-left shadow-lg">
             <div>Education</div>
             <div>Experience</div>
             <div>Certificates</div>
