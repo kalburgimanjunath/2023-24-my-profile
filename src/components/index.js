@@ -4,4 +4,5 @@ import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import Widgets from "./Widgets";
 import Navbar from "./Navbar";
-export { Header, Navbar, Footer, Widgets, Cards, Sidebar };
+import Search from "./Search";
+export { Header, Navbar, Footer, Widgets, Cards, Sidebar, Search };

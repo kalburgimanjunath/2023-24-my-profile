@@ -7,6 +7,12 @@ export const About = [
     bio: "12+ years of experience in architecting the products and ui/ux development",
     email: "manjunathkalburgi@gmail.com",
     zipcode: "580030",
+    social: {
+      linkedin: `https://www.linkedin.com/in/kalburgimanjunath/`,
+      facebook: "https://facebook.com/kalburgimanjunath",
+      github: "https://github.com/kalburgimanjunath",
+      website: "",
+    },
     education: [
       {
         id: 1,

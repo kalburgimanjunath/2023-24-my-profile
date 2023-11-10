@@ -6,7 +6,7 @@ export default function Cards({ title, items, link }) {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(items.length);
   return (
-    <div>
+    <div className="p-4">
       <h1 className="font-bold text-2xl text-left ml-2">{title}</h1>
       <div className="overflow-x-auto flex">
         {items &&

@@ -14,3 +14,6 @@
 .tabs div {
   @apply p-1 bg-pink-200 hover:bg-pink-300 flex cursor-pointer;
 }
+.navbar .active {
+  @apply bg-pink-200 p-2 rounded-lg underline;
+}
