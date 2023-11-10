@@ -7,6 +7,36 @@ export const About = [
     bio: "12+ years of experience in architecting the products and ui/ux development",
     email: "manjunathkalburgi@gmail.com",
     zipcode: "580030",
+    education: [
+      {
+        id: 1,
+        title: "BE in CSE",
+        collage: "sksvmacet",
+        yearPass: "2010",
+      },
+      {
+        id: 2,
+        title: "Diploma in CSE",
+        collage: "kle polytechnic",
+        yearPass: "2007",
+      },
+    ],
+    experience: [
+      {
+        id: 1,
+        title: "Technical Architect",
+        company: "BCForward",
+        fromYear: "2010",
+        toYear: "2023",
+      },
+      {
+        id: 2,
+        title: "Tech Architect",
+        company: "Quess",
+        fromYear: "2010",
+        toYear: "2023",
+      },
+    ],
     projects: [
       {
         id: 1,

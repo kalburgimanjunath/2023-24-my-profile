@@ -1,5 +1,24 @@
 import { Cards } from "../components";
 import { Hero } from "./Home";
+const Education = ({ education }) => {
+  return (
+    <li>
+      <div>{education.title}</div>
+      <div>{education.college}</div>
+      <div>{education.yearPass}</div>
+    </li>
+  );
+};
+const Experience = ({ experience }) => {
+  return (
+    <li>
+      <div>{experience.title}</div>
+      <div>{experience.company}</div>
+      <div>{experience.fromYear}</div>
+      <div>{experience.toYear}</div>
+    </li>
+  );
+};
 export default function About({ profile }) {
   return (
     <div className="m-24 w-full">
@@ -12,8 +31,20 @@ export default function About({ profile }) {
             <div>Certificates</div>
           </div>
           <div>
-            <div>Education</div>
-            <div>Experience</div>
+            <ol>
+              {profile &&
+                profile.education &&
+                profile.education.map((item) => {
+                  return <Education key={item.id} education={item} />;
+                })}
+            </ol>
+            <ol>
+              {profile &&
+                profile.experience &&
+                profile.experience.map((item) => {
+                  return <Experience key={item.id} experience={item} />;
+                })}
+            </ol>
             <div>Certificates</div>
           </div>
         </div>
