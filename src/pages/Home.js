@@ -20,7 +20,7 @@ export const Hero = ({ title, subtitle, isShowmore = false }) => {
     <div className="bg-white border-2 m-2 rounded-lg">
       <div className=" flex p-3 align-center">
         <img
-          src="https://i.pravatar.cc/300"
+          src="https://th.achnet.com/unsafe/0x0:270x277/fit-in/270x270/dececb913d134891a10fa938307d4967/4.png"
           width={200}
           height={200}
           className="rounded-full"
