@@ -8,3 +8,9 @@
 .button-primary {
   @apply bg-pink-700 p-3 m-3 rounded-lg;
 }
+.tabs {
+  @apply p-2;
+}
+.tabs div {
+  @apply p-1 bg-pink-200 hover:bg-pink-300 flex cursor-pointer;
+}
