@@ -46,6 +46,9 @@ export default function Navbar() {
               <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
           </li>
+          <li className="p-2 cursor-pointer">
+            <a href="./login">Login</a>
+          </li>
         </ul>
         <div className="mb-1">{showSearch && <Search />}</div>
       </nav>
