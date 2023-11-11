@@ -1,16 +1,44 @@
 import React, { useState } from "react";
+import Paginate from "./Paginate";
 export default function Cards({ title, items, link }) {
   const [showDescription, setShowDescription] = useState(false);
-  const [previous, setPrevious] = useState(0);
-  const [next, setNext] = useState(0);
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(items.length);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(2);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+  const previousPage = () => {
+    if (currentPage !== 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const nextPage = () => {
+    if (currentPage !== Math.ceil(items.length / postsPerPage)) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
   return (
     <div className="p-4">
       <h1 className="font-bold text-2xl text-left ml-2">{title}</h1>
+      <div className="w-full clear-both flex">
+        <Paginate
+          postsPerPage={postsPerPage}
+          totalPosts={items.length}
+          paginate={paginate}
+          previousPage={previousPage}
+          nextPage={nextPage}
+        />
+      </div>
       <div className="overflow-x-auto flex">
-        {items &&
-          items.map((item) => {
+        {currentPosts &&
+          currentPosts.map((item) => {
             return (
               <React.Fragment key={item.title}>
                 <a
@@ -36,11 +64,6 @@ export default function Cards({ title, items, link }) {
               </React.Fragment>
             );
           })}
-        <div>
-          {current > count - 1 && <div>Previous</div>}
-          <div>Current:{count}</div>
-          {next < count - 1 && <div>Next</div>}
-        </div>
       </div>
     </div>
   );

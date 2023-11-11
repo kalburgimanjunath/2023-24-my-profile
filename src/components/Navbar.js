@@ -13,7 +13,7 @@ export default function Navbar() {
   const [showSearch, setSearch] = useState(false);
 
   return (
-    <div className="flex justify-center fixed top-0 shadow-lg w-full bg-white">
+    <div className="z-10 flex justify-center fixed top-0 shadow-lg w-full bg-white">
       <nav>
         <ul className="flex navbar">
           <li className="font-bold p-2 cursor-pointer text-pink-600 hover:text-pink-700 hover:scale-y-150">
@@ -47,7 +47,7 @@ export default function Navbar() {
             </svg>
           </li>
         </ul>
-        {showSearch && <Search />}
+        <div className="mb-1">{showSearch && <Search />}</div>
       </nav>
     </div>
   );
