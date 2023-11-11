@@ -42,7 +42,7 @@ export default function Cards({ title, items, link }) {
             return (
               <React.Fragment key={item.title}>
                 <a
-                  href=""
+                  href={`/details/${item.id}`}
                   onMouseEnter={() => setShowDescription(true)}
                   onMouseLeave={() => setShowDescription(false)}
                   className="bg-white hover:text-blue-700 hover:bg-pink-100 border shadow-md rounded-lg m-2"

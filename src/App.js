@@ -3,12 +3,16 @@ import { Header, Footer, Sidebar, Widgets, Cards } from "./components/index";
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/index";
 import { About } from "./about";
-import { AboutPage, Products, Articles, Contact } from "./pages/index";
+import { AboutPage, Products, Articles, Contact, Details } from "./pages/index";
 export default function App() {
   return (
     <div className="App">
       <Header />
       <Routes>
+        <Route
+          path="/details/:id"
+          element={<Details title="details" profile={About[0]} />}
+        />
         <Route
           path="/articles"
           element={<Articles title="articles" profile={About[0]} />}
