@@ -1,9 +1,9 @@
 import { useParams } from "react-router";
-export default function Details({ title, profile }) {
+export default function Details({ title, profile, type }) {
   const { id } = useParams();
   const filterData =
     profile &&
-    profile["projects"].filter((item) => {
+    profile[type].filter((item) => {
       return item.id == id;
     });
   console.log(filterData);

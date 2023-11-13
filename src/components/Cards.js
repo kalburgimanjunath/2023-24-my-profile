@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Paginate from "./Paginate";
-export default function Cards({ title, items, link }) {
+export default function Cards({ title, items, type }) {
   const [showDescription, setShowDescription] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -8,7 +8,8 @@ export default function Cards({ title, items, link }) {
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
-
+  const link =
+    type == "projects" ? "projects" : type == "hobbies" ? "hobbies" : "posts";
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -42,7 +43,7 @@ export default function Cards({ title, items, link }) {
             return (
               <React.Fragment key={item.title}>
                 <a
-                  href={`/details/${item.id}`}
+                  href={`/${link}/${item.id}`}
                   onMouseEnter={() => setShowDescription(true)}
                   onMouseLeave={() => setShowDescription(false)}
                   className="bg-white hover:text-blue-700 hover:bg-pink-100 border shadow-md rounded-lg m-2"

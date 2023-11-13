@@ -19,9 +19,24 @@ export default function App() {
       <Routes>
         <Route path="/login" element={<Login profile={About[0]} />} />
         <Route
-          path="/details/:id"
-          element={<Details title="details" profile={About[0]} />}
+          path="/projects/:id"
+          element={
+            <Details type="projects" title="projects" profile={About[0]} />
+          }
         />
+        <Route
+          path="/hobbies/:id"
+          element={
+            <Details type="hobbies" title="projects" profile={About[0]} />
+          }
+        />
+        <Route
+          path="/posts/:id"
+          element={
+            <Details type="posts" title="projects" profile={About[0]} />
+          }
+        />
+        
         <Route
           path="/articles"
           element={<Articles title="articles" profile={About[0]} />}
