@@ -1,6 +1,11 @@
 import { useParams } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment } from "../store/features/counterSlice";
+
 export default function Details({ title, profile, type }) {
   const { id } = useParams();
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
   const filterData =
     profile &&
     profile[type].filter((item) => {
@@ -12,6 +17,19 @@ export default function Details({ title, profile, type }) {
         <div>
           <img src={data.image} />
         </div>
+        <div>Likes{count}</div>
+        <button
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          Increment
+        </button>
+        <button
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          Decrement
+        </button>
         <div className="font-bold">{data.title}</div>
         <div>{data.description}</div>
       </div>

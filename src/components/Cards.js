@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Paginate from "./Paginate";
-export default function Cards({ title, items, type }) {
+export default function Cards({ title, items, type }) { 
+
   const [showDescription, setShowDescription] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
