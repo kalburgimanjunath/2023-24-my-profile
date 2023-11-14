@@ -5,8 +5,8 @@ export default function Navbar() {
   const navlinks = [
     { title: "Home", link: "" },
     { title: "About", link: "about" },
-    { title: "Projects", link: "projects" },
-    { title: "Articles", link: "articles" },
+    { title: "Work", link: "projects" },
+    { title: "Guides", link: "articles" },
     { title: "Contact Me", link: "contact" },
   ];
   const [active, setActive] = useState("");
