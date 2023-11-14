@@ -9,6 +9,7 @@ import {
   Articles,
   Contact,
   Details,
+  Design,
   Login,
 } from "./pages/index";
 function RequireAuth({ children }) {
@@ -54,6 +55,10 @@ export default function App() {
         <Route
           path="/articles"
           element={<Articles title="articles" profile={About[0]} />}
+        />
+        <Route
+          path="/design"
+          element={<Design title="design" profile={About[0]} />}
         />
         <Route
           path="/projects"

@@ -5,9 +5,11 @@ import Articles from "./Articles";
 import Contact from "./Contact";
 import Details from "./Details";
 import Login from "./Login";
+import Design from "./Design";
 export {
   Home,
   Login,
+  Design,
   About as AboutPage,
   Products,
   Articles,
