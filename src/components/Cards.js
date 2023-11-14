@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Paginate from "./Paginate";
-export default function Cards({ title, items, type }) { 
-
+export default function Cards({ title, subtitle, items, type }) {
   const [showDescription, setShowDescription] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,7 +27,8 @@ export default function Cards({ title, items, type }) {
 
   return (
     <div className="p-4">
-      <h1 className="font-bold text-2xl text-left ml-2">{title}</h1>
+      {title && <h1 className="font-bold text-2xl text-left ml-2">{title}</h1>}
+      {subtitle && <h3 className="ml-2 text-left">{subtitle}</h3>}
       <div className="w-full clear-both flex">
         <Paginate
           postsPerPage={postsPerPage}
@@ -47,7 +47,7 @@ export default function Cards({ title, items, type }) {
                   href={`/${link}/${item.id}`}
                   onMouseEnter={() => setShowDescription(true)}
                   onMouseLeave={() => setShowDescription(false)}
-                  className="bg-white hover:text-blue-700 hover:bg-pink-100 border shadow-md rounded-lg m-2"
+                  className="bg-white hover:text-blue-700 hover:bg-pink-100 hover:scale-105 hover:delay-200 border shadow-md rounded-lg m-2"
                 >
                   {item.image && (
                     <div>

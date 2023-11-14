@@ -153,7 +153,17 @@ export default function Home({ profile }) {
     <div className="container mt-5 ml-2 mr-2 mb-2">
       <Sidebar />
       <HomePage profile={profile} />
-      <Cards type="hobbies" title="Latest Projects" items={profile.hobbies} />
+      <Cards
+        type="hobbies"
+        title="Freelancer Resources"
+        items={profile.hobbies}
+      />
+      <Cards
+        type="hobbies"
+        title="Latest Projects for Solopreneur"
+        subtitle="I turn complex ideas into intuitive experiences."
+        items={profile.hobbies}
+      />
       <Cards type="projects" title="Projects" items={profile.projects} />
       <Cards type="posts" title="Posts" items={profile.articles} />
     </div>
