@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { AudioRecorder, useAudioRecorder } from "react-audio-voice-recorder";
 import { useSelector, useDispatch } from "react-redux";
 import { add } from "../store/features/audioSlice";
+const PdfViewerComponent = React.lazy(() =>
+  import("../components/PdfViewerComponent"),
+);
 
 export default function Lessons() {
   const recorderControls = useAudioRecorder();
@@ -11,7 +14,7 @@ export default function Lessons() {
   const addAudioElement = (blob) => {
     const url = URL.createObjectURL(blob);
     setAudios([...audios, blob]);
-    dispatch("audio/add");
+    // dispatch("audio/add");
     const audio = document.createElement("audio");
     audio.src = url;
     audio.controls = true;
@@ -39,6 +42,13 @@ export default function Lessons() {
         <div>
           <div className="border-dotted border-2 h20 text-center align-items-center">
             Upload PDF,PPT,Text Content
+          </div>
+          <div>
+            <div className="PDF-viewer">
+              {/* <Suspense fallback={<h1>Loading</h1>}>
+                <PdfViewerComponent document={"./slides.pptx"} />
+              </Suspense> */}
+            </div>
           </div>
         </div>
         <div>
