@@ -48,8 +48,8 @@ export const About = [
         id: 2,
         title: "Tech Architect",
         company: "Quess",
-        fromYear: "2010",
-        toYear: "2023",
+        fromYear: "2021",
+        toYear: "2022",
       },
     ],
     projects: [

@@ -24,55 +24,57 @@ function RequireAuth({ children }) {
 }
 export default function App() {
   return (
-    <div className="App">
+    <div className="container-fluid bg-gray-100">
       <Header />
-      <Routes>
-        <Route path="/lessons" element={<Lessons />} />
-        <Route path="/login" element={<Login profile={About[0]} />} />
-        <Route
-          path="/projects/:id"
-          element={
-            <RequireAuth>
-              <Details type="projects" title="projects" profile={About[0]} />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/hobbies/:id"
-          element={
-            <RequireAuth>
-              <Details type="hobbies" title="hobbies" profile={About[0]} />
-            </RequireAuth>
-          }
-        />
-        <Route
-          path="/posts/:id"
-          element={
-            <RequireAuth>
-              <Details type="articles" title="articles" profile={About[0]} />
-            </RequireAuth>
-          }
-        />
+      <div className="mx-20">
+        <Routes>
+          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/login" element={<Login profile={About[0]} />} />
+          <Route
+            path="/projects/:id"
+            element={
+              <RequireAuth>
+                <Details type="projects" title="projects" profile={About[0]} />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/hobbies/:id"
+            element={
+              <RequireAuth>
+                <Details type="hobbies" title="hobbies" profile={About[0]} />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/posts/:id"
+            element={
+              <RequireAuth>
+                <Details type="articles" title="articles" profile={About[0]} />
+              </RequireAuth>
+            }
+          />
 
-        <Route
-          path="/articles"
-          element={<Articles title="articles" profile={About[0]} />}
-        />
-        <Route
-          path="/design"
-          element={<Design title="design" profile={About[0]} />}
-        />
-        <Route
-          path="/projects"
-          element={<Products title="projects" profile={About[0]} />}
-        />
-        <Route
-          path="/contact"
-          element={<Contact title="contact" profile={About[0]} />}
-        />
-        <Route path="/about" element={<AboutPage profile={About[0]} />} />
-        <Route path="/" exact element={<Home profile={About[0]} />} />
-      </Routes>
+          <Route
+            path="/articles"
+            element={<Articles title="articles" profile={About[0]} />}
+          />
+          <Route
+            path="/design"
+            element={<Design title="design" profile={About[0]} />}
+          />
+          <Route
+            path="/projects"
+            element={<Products title="projects" profile={About[0]} />}
+          />
+          <Route
+            path="/contact"
+            element={<Contact title="contact" profile={About[0]} />}
+          />
+          <Route path="/about" element={<AboutPage profile={About[0]} />} />
+          <Route path="/" exact element={<Home profile={About[0]} />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );
