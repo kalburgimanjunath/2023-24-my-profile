@@ -12,6 +12,7 @@ import {
   Design,
   Login,
 } from "./pages/index";
+import Lessons from "./pages/Lessons";
 function RequireAuth({ children }) {
   const { authed } = true;
   const location = useLocation();
@@ -26,6 +27,7 @@ export default function App() {
     <div className="App">
       <Header />
       <Routes>
+        <Route path="/lessons" element={<Lessons />} />
         <Route path="/login" element={<Login profile={About[0]} />} />
         <Route
           path="/projects/:id"

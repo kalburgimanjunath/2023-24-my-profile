@@ -6,7 +6,7 @@ export default function Conference() {
   return (
     <div className="grid grid-cols-2">
       <div>
-        <div>
+        {/* <div>
           <button type="button" className="bg-gray-100">
             Speaker
           </button>
@@ -15,17 +15,18 @@ export default function Conference() {
           <button type="button" className="bg-gray-100">
             Sessions
           </button>
-        </div>
+        </div> */}
         <div>
-          <button type="button" className="bg-gray-100">
-            Videos
-          </button>
+          {/* <button type="button" className="bg-gray-100">
+            Lessons
+          </button> */}
+          <Link to="../lessons">Lessons</Link>
         </div>
-        <div>
+        {/* <div>
           <button type="button" className="bg-gray-100">
             Blog
           </button>
-        </div>
+        </div> */}
       </div>
       {toggleItems && <div></div>}
     </div>
