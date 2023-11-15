@@ -1,6 +1,7 @@
 import { Cards } from "../components";
 import { Hero } from "./Home";
 import React, { useState } from "react";
+import Conference from "./Conference";
 const Education = ({ education }) => {
   return (
     <li>
@@ -35,6 +36,7 @@ export default function About({ profile }) {
     <div className="m-24 w-full">
       <div className="grid md:grid-cols-2 border-2 ">
         {profile && <Hero title={profile.displayname} subtitle={profile.bio} />}
+
         <div className="z-10">
           <div className="fixed border-2 right-0 tabs justify-left shadow-lg">
             <div
@@ -79,6 +81,9 @@ export default function About({ profile }) {
         </div>
       </div>
       <div>
+        <div>
+          <Conference />
+        </div>
         <Cards title="Upcoming Projects" items={profile.hobbies} />
         <Cards title="Projects" items={profile.projects} />
         <Cards title="Posts" items={profile.articles} />
