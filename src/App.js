@@ -11,6 +11,7 @@ import {
   Details,
   Design,
   Login,
+  Coding,
 } from "./pages/index";
 import Lessons from "./pages/Lessons";
 function RequireAuth({ children }) {
@@ -28,6 +29,8 @@ export default function App() {
       <Header />
       <div className="mx-20">
         <Routes>
+          <Route path="/coding" element={<Coding />} />
+          <Route path="/coding/:id" element={<Coding />}></Route>
           <Route path="/lessons" element={<Lessons />} />
           <Route path="/login" element={<Login profile={About[0]} />} />
           <Route

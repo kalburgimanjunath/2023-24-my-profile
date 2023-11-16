@@ -6,10 +6,12 @@ import Contact from "./Contact";
 import Details from "./Details";
 import Login from "./Login";
 import Design from "./Design";
+import Coding from "./Coding";
 export {
   Home,
   Login,
   Design,
+  Coding,
   About as AboutPage,
   Products,
   Articles,
