@@ -5,4 +5,5 @@ import Sidebar from "./Sidebar";
 import Widgets from "./Widgets";
 import Navbar from "./Navbar";
 import Search from "./Search";
-export { Header, Navbar, Footer, Widgets, Cards, Sidebar, Search };
+import GitProjects from "./GitProjects";
+export { Header, Navbar, GitProjects, Footer, Widgets, Cards, Sidebar, Search };

@@ -31,7 +31,7 @@ export default function Coding() {
       </div>
       <div className="ml-20 w-screen">
         {id}
-        <iframe
+        {/* <iframe
           src="https://codesandbox.io/p/github/kalburgimanjunath/next-sandbox/main?embed=1&showConsole=true"
           style={{
             width: "100%",
@@ -43,7 +43,7 @@ export default function Coding() {
           title="kalburgimanjunath/next-sandbox/main"
           allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
           sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-        ></iframe>
+        ></iframe> */}
       </div>
     </div>
   );

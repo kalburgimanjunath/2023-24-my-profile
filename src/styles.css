@@ -9,11 +9,13 @@
   @apply bg-pink-700 p-3 m-3 rounded-lg;
 }
 .tabs {
-  @apply p-2;
+  @apply pl-4 font-bold;
+
+  justify-content: space-arround;
 }
 .tabs div {
-  @apply p-1 bg-pink-200 hover:bg-pink-300 flex cursor-pointer;
+  @apply p-1 hover:bg-pink-300 flex cursor-pointer;
 }
 .navbar .active {
-  @apply bg-pink-200 p-2 rounded-lg underline;
+  @apply p-2 rounded-lg underline;
 }

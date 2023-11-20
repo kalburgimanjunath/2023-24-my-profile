@@ -1,4 +1,4 @@
-import { Cards } from "../components";
+import { Cards, GitProjects } from "../components";
 import { Hero } from "./Home";
 import React, { useState } from "react";
 import Conference from "./Conference";
@@ -21,16 +21,32 @@ const Experience = ({ experience }) => {
     </li>
   );
 };
+const Certificate = ({ certificate }) => {
+  return (
+    <li>
+      <div className="font-bold">{certificate.title}</div>
+      <div>{certificate.url}</div>
+    </li>
+  );
+};
 export default function About({ profile }) {
   const [showEducationBlubs, setEducationBlubs] = useState("false");
   const [showExperienceBlubs, setExperienceBlubs] = useState("false");
+  const [showCertificateBlubs, setCertificateBlubs] = useState("false");
   const showEducation = () => {
     setEducationBlubs(true);
     setExperienceBlubs(false);
+    setCertificateBlubs(false);
   };
   const showExperience = () => {
     setEducationBlubs(false);
     setExperienceBlubs(true);
+    setCertificateBlubs(false);
+  };
+  const showCertificates = () => {
+    setEducationBlubs(false);
+    setExperienceBlubs(false);
+    setCertificateBlubs(true);
   };
   return (
     <div className="m-24 w-full">
@@ -38,26 +54,39 @@ export default function About({ profile }) {
         {profile && <Hero title={profile.displayname} subtitle={profile.bio} />}
 
         <div className="z-10">
-          <div className="fixed border-2 right-0 tabs justify-left shadow-lg">
+          <div className="flex border-1 bg-white right-0 tabs justify-left shadow-lg">
             <div
+              className={showEducationBlubs ? "underline" : ""}
               onClick={() => {
                 setEducationBlubs(true);
                 setExperienceBlubs(false);
+                setCertificateBlubs(false);
               }}
             >
               Education
             </div>
             <div
+              className={showExperienceBlubs ? "underline" : ""}
               onClick={() => {
                 setEducationBlubs(false);
                 setExperienceBlubs(true);
+                setCertificateBlubs(false);
               }}
             >
               Experience
             </div>
-            <div>Certificates</div>
+            <div
+              className={showCertificateBlubs ? "underline" : ""}
+              onClick={() => {
+                setEducationBlubs(false);
+                setExperienceBlubs(false);
+                setCertificateBlubs(true);
+              }}
+            >
+              Certificates
+            </div>
           </div>
-          <div className="fixed min-w-min p-5 text-left border-2 bg-white shadow-lg m-3">
+          <div className="min-w-min p-5 text-left border-1 bg-white shadow-lg">
             {showEducationBlubs && (
               <ol>
                 {profile &&
@@ -76,10 +105,19 @@ export default function About({ profile }) {
                   })}
               </ol>
             )}
-            <div>Certificates</div>
+            {showCertificateBlubs && (
+              <ol>
+                {profile &&
+                  profile.certificates &&
+                  profile.certificates.map((item) => {
+                    return <Certificate key={item.id} certificate={item} />;
+                  })}
+              </ol>
+            )}
           </div>
         </div>
       </div>
+      <div><GitProjects/></div>
       <div>
         <div>
           <Conference />

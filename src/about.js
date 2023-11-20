@@ -115,5 +115,13 @@ export const About = [
         image: "https://picsum.photos/seed/picsum/200/300",
       },
     ],
+    certificates: [
+      {
+        id: 1,
+        title: "Six Sigma Green Belt Design for Six Sigma (DFSS) Core Training",
+        url: "",
+      },
+      { id: 2, title: "User Experience", url: "" },
+    ],
   },
 ];
