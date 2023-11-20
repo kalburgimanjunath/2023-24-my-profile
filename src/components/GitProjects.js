@@ -12,7 +12,7 @@ export default function GitProjects() {
   }, [projects]);
   return (
     <div className="p-2 bg-white m-1 shadow-lg">
-      Git Projects
+      <h3 className="font-bold">Git Projects</h3>
       <div>
         {projects &&
           projects.map((item) => {
@@ -27,7 +27,6 @@ export default function GitProjects() {
                     {item.name}
                   </a>
                 </div>
-                <div>{item.html_url}</div>
               </>
             );
           })}
