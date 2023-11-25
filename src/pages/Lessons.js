@@ -1,9 +1,9 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense, useRef } from "react";
 import { AudioRecorder, useAudioRecorder } from "react-audio-voice-recorder";
 import { useSelector, useDispatch } from "react-redux";
 import { add } from "../store/features/audioSlice";
-const PdfViewerComponent = React.lazy(() =>
-  import("../components/PdfViewerComponent"),
+const PdfViewerComponent = React.lazy(
+  () => import("../components/PdfViewerComponent"),
 );
 
 export default function Lessons() {
@@ -30,9 +30,17 @@ export default function Lessons() {
       document.getElementById("recordaudio").appendChild(audio);
     });
   };
+
+  const [documentnewURL, setDocumentURL] = useState(
+    "./Resume-manjunathkalburgi85.pdf",
+  );
+  const refURLDocument = useRef();
+  const onChangeFileUpload = () => {
+    setDocumentURL(refURLDocument.current.value);
+  };
   useEffect(() => {
     if (audios.length < 1) loadAudios();
-  }, [audios]);
+  }, [audios, documentnewURL]);
   return (
     <div className="m-20">
       <h1 className="text-2xl font-bold text-center align-items-center">
@@ -42,12 +50,19 @@ export default function Lessons() {
         <div>
           <div className="border-dotted border-2 h20 text-center align-items-center">
             Upload PDF,PPT,Text Content
+            <input
+              type="file"
+              ref={refURLDocument}
+              onChange={onChangeFileUpload}
+            />
           </div>
           <div>
             <div className="PDF-viewer">
-              {/* <Suspense fallback={<h1>Loading</h1>}>
-                <PdfViewerComponent document={"./slides.pptx"} />
-              </Suspense> */}
+              <Suspense fallback={<h1>Loading</h1>}>
+                <PdfViewerComponent
+                  document={documentnewURL ? documentnewURL : "./test.pdf"}
+                />
+              </Suspense>
             </div>
           </div>
         </div>

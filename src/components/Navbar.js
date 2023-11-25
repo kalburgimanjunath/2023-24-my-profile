@@ -7,6 +7,9 @@ export default function Navbar() {
     { title: "About", link: "about" },
     { title: "Work", link: "projects" },
     { title: "Guides", link: "articles" },
+    { title: "Design", link: "design" },
+    { title: "Coding", link: "coding" },
+    { title: "Lessons", link: "lessons" },
     { title: "Contact Me", link: "contact" },
   ];
   const [active, setActive] = useState("");
