@@ -66,7 +66,7 @@ export default function Lessons() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="m-2 p-3 bg-white border-2 rounded-lg">
           Record Session
           <button className="bg-pink-300 hover:bg-pink-400 border-2 rounded-md m-2 p-2">
             Audio

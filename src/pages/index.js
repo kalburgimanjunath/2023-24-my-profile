@@ -7,6 +7,7 @@ import Details from "./Details";
 import Login from "./Login";
 import Design from "./Design";
 import Coding from "./Coding";
+import Docs from "./Docs";
 export {
   Home,
   Login,
@@ -17,4 +18,5 @@ export {
   Articles,
   Contact,
   Details,
+  Docs,
 };

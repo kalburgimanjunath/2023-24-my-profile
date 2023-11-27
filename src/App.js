@@ -1,7 +1,7 @@
 import "./styles.css";
 import { Header, Footer, Sidebar, Widgets, Cards } from "./components/index";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
-import { Home } from "./pages/index";
+
 import { About } from "./about";
 import {
   AboutPage,
@@ -11,6 +11,8 @@ import {
   Details,
   Design,
   Login,
+  Home,
+  Docs,
   Coding,
 } from "./pages/index";
 import Lessons from "./pages/Lessons";
@@ -29,6 +31,7 @@ export default function App() {
       <Header />
       <div className="mx-20">
         <Routes>
+          <Route path="/docs" element={<Docs />} />
           <Route path="/coding" element={<Coding />} />
           <Route path="/coding/:id" element={<Coding />}></Route>
           <Route path="/lessons" element={<Lessons />} />
