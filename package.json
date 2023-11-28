@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@leecheuk/react-google-login": "^5.4.1",
+    "@mdx-js/react": "^3.0.0",
     "@reduxjs/toolkit": "^1.9.7",
     "loader-utils": "3.2.1",
     "pspdfkit": "^2023.5.2",

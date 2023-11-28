@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Routes, Route } from "react-router";
+import { MDXProvider } from "@mdx-js/react";
 import Problem1 from "../codesamples/Problem1";
 import Problem2 from "../codesamples/Problem2";
 import Problem3 from "../codesamples/Problem3";
@@ -34,6 +35,11 @@ const Sidebar = () => {
 };
 export default function Coding() {
   const { id } = useParams();
+  const components = {
+    em(props) {
+      return <i {...props} />;
+    },
+  };
   return (
     <div className="mt-20 ml-0 grid grid-cols-2 overflow-auto">
       <div className="fixed mt-15 pt-1 left-0 bottom-0 bg-gray-300 text-gray-100 top-0 w-3/2">
@@ -41,6 +47,10 @@ export default function Coding() {
       </div>
       <div className="ml-20 w-screen border-2">
         {id}
+        {/* <MDXProvider components={components}>
+          <Sample />
+        </MDXProvider> */}
+
         <Problem10 />
         <Problem9 />
         <Problem8 />
