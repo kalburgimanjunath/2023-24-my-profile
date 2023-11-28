@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Routes, Route } from "react-router";
+import Problem1 from "../codesamples/Problem1";
+import Problem2 from "../codesamples/Problem2";
+import Problem3 from "../codesamples/Problem3";
+import Problem4 from "../codesamples/Problem4";
 
 const Sidebar = () => {
   const menuitems = [
@@ -25,12 +29,16 @@ const Sidebar = () => {
 export default function Coding() {
   const { id } = useParams();
   return (
-    <div className="mt-5 ml-0 grid grid-cols-2 overflow-auto">
+    <div className="mt-20 ml-0 grid grid-cols-2 overflow-auto">
       <div className="fixed mt-15 pt-1 left-0 bottom-0 bg-gray-300 text-gray-100 top-0 w-3/2">
         <Sidebar />
       </div>
-      <div className="ml-20 w-screen">
+      <div className="ml-20 w-screen border-2">
         {id}
+        <Problem4 />
+        <Problem3 />
+        {/* <Problem2 /> */}
+        <Problem1 />
         {/* <iframe
           src="https://codesandbox.io/p/github/kalburgimanjunath/next-sandbox/main?embed=1&showConsole=true"
           style={{

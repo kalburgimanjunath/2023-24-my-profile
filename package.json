@@ -11,6 +11,8 @@
     "pspdfkit": "^2023.5.2",
     "react": "18.2.0",
     "react-audio-voice-recorder": "^2.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-code-blocks": "^0.1.5",
     "react-dom": "18.2.0",
     "react-facebook-login": "^4.1.1",
     "react-media-recorder": "1.6.3",
