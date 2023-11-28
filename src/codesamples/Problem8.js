@@ -44,10 +44,12 @@ const EmailListForm = () => {
           </button>
         </div>
       ))}
-      <button type="button" onClick={addEmail}>
+      <button type="button" onClick={addEmail} className="primary-button">
         Add Email
       </button>
-      <button type="submit">Submit</button>
+      <button type="submit" className="primary-button">
+        Submit
+      </button>
     </form>
   );
 };

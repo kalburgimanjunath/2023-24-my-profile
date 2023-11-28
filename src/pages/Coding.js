@@ -9,6 +9,8 @@ import Problem5 from "../codesamples/Problem5";
 import Problem6 from "../codesamples/Problem6";
 import Problem7 from "../codesamples/Problem7";
 import Problem8 from "../codesamples/Problem8";
+import Problem9 from "../codesamples/Problem9";
+import Problem10 from "../codesamples/Problem10";
 
 const Sidebar = () => {
   const menuitems = [
@@ -39,6 +41,8 @@ export default function Coding() {
       </div>
       <div className="ml-20 w-screen border-2">
         {id}
+        <Problem10 />
+        <Problem9 />
         <Problem8 />
         <Problem7 />
         <Problem6 />
