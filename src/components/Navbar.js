@@ -11,6 +11,7 @@ export default function Navbar() {
     { title: "Coding", link: "coding" },
     { title: "Lessons", link: "lessons" },
     { title: "Contact Me", link: "contact" },
+    { title: "fitness", link: "https://fitnessapp.com/test" },
   ];
   const [active, setActive] = useState("");
   const [showSearch, setSearch] = useState(false);
