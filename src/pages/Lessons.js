@@ -42,7 +42,7 @@ export default function Lessons() {
     if (audios.length < 1) loadAudios();
   }, [audios, documentnewURL]);
   return (
-    <div className="m-20">
+    <div className="m-20 absolute top-0 left-0 w-full">
       <h1 className="text-2xl font-bold text-center align-items-center">
         Lessons
       </h1>
