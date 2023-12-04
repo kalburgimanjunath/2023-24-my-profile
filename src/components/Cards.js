@@ -7,7 +7,7 @@ export default function Cards({ title, subtitle, items, type }) {
   const [postsPerPage] = useState(2);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = items && items.slice(indexOfFirstPost, indexOfLastPost);
   const link =
     type == "projects" ? "projects" : type == "hobbies" ? "hobbies" : "posts";
   const paginate = (pageNumber) => {
